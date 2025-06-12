@@ -14,14 +14,18 @@ class LoginController extends Controller
 
     public function loginsubmit(Request $request)
     {
+        $request->validate([
+            'user_name' => 'required',
+            'password' => 'required',
+        ]);
         $credentials=$request->only('user_name','password');
 
         if (Auth::attempt($credentials)){
-            return redirect()->intended('dashboard');
+            return redirect()->intended('admin');
         }
 
         return back()->withErrors([
-            'email'=>'Invalid credentials.',
+            'user_name'=>'Invalid credentials.',
         ]);
     }
 
