@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PublicationController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -12,3 +13,7 @@ Route::get('/disclaimer', function () {
 });
 
 Route::get('/login', [LoginController::class,'login'])->name('login');
+
+Route::get('/publication', [PublicationController::class,'index'])->name('publication');
+Route::get('/publication/create', [PublicationController::class,'create'])->name('publication.create');
+Route::post('/publication/store', [PublicationController::class,'store'])->name('publication.store');
