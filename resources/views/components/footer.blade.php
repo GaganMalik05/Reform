@@ -13,9 +13,9 @@
                     <h1>Useful Links :</h1>
                     <hr>
                     <ul class="w-fit whitespace-nowrap space-y-0.5">
-                        <li><a href="#">Governor Arunachal Pradesh</a></li>
-                        <li><a href="#">Govt of Arunachal Pradesh</a></li>
-                        <li><a href="#">Department of IPR</a></li>
+                        <li><a href="https://arunachalgovernor.gov.in/" target='_blank'>Governor Arunachal Pradesh</a></li>
+                        <li><a href="https://arunachalpradesh.gov.in/" target='_blank'>Govt of Arunachal Pradesh</a></li>
+                        <li><a href="https://arunachalipr.gov.in/" target='_blank'>Department of IPR</a></li>
                     </ul>
                 </div>
 
@@ -23,11 +23,11 @@
                     <h1>Other Important Links :</h1>
                     <hr>
                     <ul class="w-fit whitespace-nowrap space-y-0.5">
-                        <li><a href="#">National Portal of India</a></li>
-                        <li><a href="#">National Knowledge Network</a></li>
-                        <li><a href="#">Open Government Data ( OGD ) Platform India</a></li>
-                        <li><a href="#">National e-Transaction Count</a></li>
-                        <li><a href="#">Department of Administrative Reforms & PG</a></li>
+                        <li><a href="https://www.india.gov.in/" target='_blank'>National Portal of India</a></li>
+                        <li><a href="https://nkn.gov.in/en/" target='_blank'>National Knowledge Network</a></li>
+                        <li><a href="https://www.data.gov.in/" target='_blank'>Open Government Data ( OGD ) Platform India</a></li>
+                        <li><a href="https://etaal.gov.in/eTaal3/" target='_blank'>National e-Transaction Count</a></li>
+                        <li><a href="https://darpg.gov.in/" target='_blank'>Department of Administrative Reforms & PG</a></li>
                     </ul>
                 </div>
             </div>
