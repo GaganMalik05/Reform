@@ -24,13 +24,14 @@ Route::get('/admin',function(){
 
 
 Route::get('/publication', [PublicationController::class,'index'])->name('publication');
-Route::get('/publication/create', [PublicationController::class,'create'])->name('publication.create');
+Route::get('/publication/create', [PublicationController::class,'create'])->middleware('auth')->name('publication.create');
 Route::post('/publication/store', [PublicationController::class,'store'])->name('publication.store');
 
 Route::get('/whoswho',[WhosWhoController::class,'index'])->name('whoswho.index');
-Route::get('/whoswho/create',[WhosWhoController::class,'create'])->name('whoswho.create');
+Route::get('/whoswho/create',[WhosWhoController::class,'create'])->middleware('auth')->name('whoswho.create');
 Route::post('/whoswho/store',[WhosWhoController::class,'store'])->name('whoswho.store');
 
 /*Latest News Routes */
-Route::get('latestnews/create',[LatestNewsController::class,'create'])->name('latestnews.create');
+
+Route::get('latestnews/create',[LatestNewsController::class,'create'])->middleware('auth')->name('latestnews.create');
 Route::post('latestnews/store',[LatestNewsController::class,'store'])->name('latestnews.store');
