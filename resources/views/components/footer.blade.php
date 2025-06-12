@@ -2,15 +2,15 @@
         <div class="flex justify-between p-8">
             <div class="">
                 <div class="bg-white mb-5 p-4">
-                    <img src="{{ asset('images/NIC_logo.svg.png') }}" alt="NIC Logo" class="nicLogo p-0.5 h-[80px] w-[200px]">
+                    <a href="https://www.nic.gov.in/" target="_blank"><img src="{{ asset('images/NIC_logo.svg.png') }}" alt="NIC Logo" class="nicLogo p-0.5 h-[80px] w-[40px]"></a>
                 </div>
-                <a href="#" class="mr-2 hover:text-amber-300 transition-all duration-300 ease-in-out text-lg;">Home</a>
-                <a href="#" class="mr-2">|</a>
-                <a href="#" class="mr-2 hover:text-amber-300 transition-all duration-300 ease-in-out text-lg;">Disclaimer</a>
+                <a href="{{route('home.index')}}" class="mr-2 hover:text-amber-300 transition-all duration-300 ease-in-out text-lg;">Home</a>
+                |
+                <a href="disclaimer" target= '_blank' class="mr-2 hover:text-amber-300 transition-all duration-300 ease-in-out text-lg;">Disclaimer</a>
             </div>
             <div class="flex justify-end">
                 <div class="pr-10 space-y-1.5">
-                    <h1>Useful Links :</h1>
+                    <h1>Useful Links</h1>
                     <hr>
                     <ul class="w-fit whitespace-nowrap space-y-0.5">
                         <li><a href="https://arunachalgovernor.gov.in/" target='_blank'>Governor Arunachal Pradesh</a></li>
@@ -20,7 +20,7 @@
                 </div>
 
                 <div class="pr-5 space-y-1.5">
-                    <h1>Other Important Links :</h1>
+                    <h1>Other Important Links</h1>
                     <hr>
                     <ul class="w-fit whitespace-nowrap space-y-0.5">
                         <li><a href="https://www.india.gov.in/" target='_blank'>National Portal of India</a></li>
