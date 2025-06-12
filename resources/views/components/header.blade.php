@@ -26,7 +26,7 @@
 
                     <ul class="absolute hidden group-hover:block bg-blue-500 w-fit whitespace-nowrap p-3">
                         <li><a>Profile</a></li>
-                        <li><a>WhoIsWho</a></li>
+                        <li><a href="{{ route('whoswho.index') }}">WhoIsWho</a></li>
                         <li><a>Organizational Structure</a></li>
                     </ul>
 
