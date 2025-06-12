@@ -2,7 +2,7 @@
 
     <section>
         <div class="flex flex-col justify-center pl-50 pr-50 pt-15 pb-15 space-y-3 tracking-wide leading-relaxed">
-            <h1 class="text-2xl">Profile :</h1>
+            <h1 class="text-2xl">Profile</h1>
             <p class="">The department of Administrative Reforms is the coordinating agency of the Government of
                 Arunachal
                 Pradesh in
@@ -14,7 +14,7 @@
                 the
                 following wings.</p>
 
-            <h1 class="text-2xl">Business :</h1>
+            <h1 class="text-2xl">Business</h1>
             <ul class="list-disc list-inside">
                 <li>All policy matters relating to recruitment, promotions, service conditions, prescription of
                     educational qualifications etc.</li>
@@ -37,14 +37,24 @@
                 <li>Matters relating to public grievances.</li>
             </ul>
         </div>
-        <div
-            class="flex flex-col justify-cente pl-50 pr-50 pt-15 pb-15 space-y-3 tracking-wide leading-relaxed bg-gray-100">
-            <h1 class="text-2xl">Latest News / Advertisements :</h1>
-            <ul>
-                <li>AD 1</li>
-                <li>AD 2</li>
-                <li>AD 3</li>
-            </ul>
+        <!-- Please fix css -->
+        <div class="flex flex-col justify-center pl-50 pr-50 pt-15 pb-15 space-y-3 tracking-wide leading-relaxed bg-gray-100">
+            <h1 class="text-2xl">Latest News / Advertisements</h1>
+
+            @if($news->isEmpty()) 
+                <p>No news or advertisements available.</p> <!-- Shows this when no news or ad available -->
+            @else
+                <ul class="list-disc list-inside">
+                    @foreach($news as $item)
+                <li class="flex items-center space-x-2">
+                        <a href="{{ asset($item->pdf_path) }}" target="_blank" class="text-blue-600 underline">
+                            {{ $item->content }}  <!-- Display text content as clickable links  -->
+                        </a>
+                </li>
+            @endforeach
+                </ul>
+            @endif
+        </div>
     </section>
 
 </x-base-layout>

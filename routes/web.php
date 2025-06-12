@@ -3,11 +3,12 @@
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PublicationController;
 use App\Http\Controllers\WhosWhoController;
+use App\Http\Controllers\LatestNewsController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home.index');
-})->name('home.index');
+use App\Http\Controllers\HomeController;
+/*Home page Routes*/
+Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
 Route::get('/disclaimer', function () {
     return view('disclaimer');
@@ -29,3 +30,7 @@ Route::post('/publication/store', [PublicationController::class,'store'])->name(
 Route::get('/whoswho',[WhosWhoController::class,'index'])->name('whoswho.index');
 Route::get('/whoswho/create',[WhosWhoController::class,'create'])->name('whoswho.create');
 Route::post('/whoswho/store',[WhosWhoController::class,'store'])->name('whoswho.store');
+
+/*Latest News Routes */
+Route::get('latestnews/create',[LatestNewsController::class,'create'])->name('latestnews.create');
+Route::post('latestnews/store',[LatestNewsController::class,'store'])->name('latestnews.store');
