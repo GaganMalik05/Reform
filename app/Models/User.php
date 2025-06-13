@@ -49,4 +49,9 @@ class User extends Authenticatable
 {
     return 'user_name';
 }
+
+public function username()
+{
+    return 'user_name';
+}
 }

@@ -13,21 +13,31 @@ class LoginController extends Controller
     }
 
     public function loginsubmit(Request $request)
-    {
-        $request->validate([
-            'user_name' => 'required',
-            'password' => 'required',
-        ]);
-        $credentials=$request->only('user_name','password');
+{
+    $request->validate([
+        'user_name' => 'required',
+        'password' => 'required',
+    ]);
 
-        if (Auth::attempt($credentials)){
-            return redirect()->intended('admin');
-        }
+    
 
-        return back()->withErrors([
-            'user_name'=>'Invalid credentials.',
-        ]);
+    $credentials = [
+        'user_name' => $request->input('user_name'),
+        'password' => $request->input('password'),
+    ];
+    
+    if (Auth::attempt($credentials)) {
+        $request->session()->regenerate(); // Important for security
+        return redirect()->intended('admin');
     }
+
+    // dd($request->all());
+
+    return back()->withErrors([
+        'user_name' => 'Invalid credentials.',
+    ])->onlyInput('user_name'); // Keeps the username input filled
+}
+
 
     public function logout(Request $request)
     {
@@ -37,4 +47,9 @@ class LoginController extends Controller
 
         return redirect('/login');
     }
+
+    public function admin()
+{
+    return view('admin'); // Make sure you have a view file resources/views/admin.blade.php
+}
 }
